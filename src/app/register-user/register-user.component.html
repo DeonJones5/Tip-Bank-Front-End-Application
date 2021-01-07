@@ -82,6 +82,47 @@
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
               <mat-form-field>
+                <input 
+                matInput
+                placeholder="Street Address"
+                type="streetaddress"
+                required
+                name="streetaddress"
+                ngModel
+                #streetaddress="ngModel">
+                  <mat-error *ngIf="streetaddress.invalid">Street Address required</mat-error>
+                <mat-icon matSuffix>house</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                matInput
+                placeholder="City"
+                type="city"
+                required
+                name="city"
+                ngModel
+                #city="ngModel">
+                  <mat-error *ngIf="city.invalid">City required</mat-error>
+                <mat-icon matSuffix>house</mat-icon>
+              </mat-form-field>
+
+              <!-- <mat-form-field>
+                <input
+                matInput
+                placeholder="State"
+                type="state"
+                required
+                name="state"
+                ngModel
+                #city="ngModel">
+                  <mat-error *ngIf="state.invalid">City required</mat-error>
+                <mat-icon matSuffix>house</mat-icon>
+              </mat-form-field> -->
+
+
+
+              <mat-form-field>
                 <input
                   matInput
                   placeholder="Password"
@@ -105,7 +146,7 @@
               <mat-form-field>
                   <input
                   matInput
-                  placeholder="Password"
+                  placeholder="Re-Enter Password"
                   type="password"
                   required
                   minlength="6"
