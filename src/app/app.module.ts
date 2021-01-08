@@ -14,11 +14,19 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 
 import { FormsModule } from '@angular/forms';
+import { RoutingModule } from './routing/routing.module';
+import { HomeComponent } from './home/home.component';
+import { MaterialModule } from './material/material.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    HomeComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    RoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
