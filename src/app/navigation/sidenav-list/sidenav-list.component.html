@@ -5,13 +5,33 @@
     <a mat-list-item routerLink="/register-user" (click)="onSidenavClose()">
         <mat-icon>login</mat-icon><span class="nav-caption">Login/Sign up</span>
     </a>
-    <a mat-list-item routerLink="/accounts" (click)="onSidenavClose()">
-        <mat-icon>account_balance</mat-icon><span class="nav-caption">Accounts</span>
-    </a>
+    <mat-list-item [matMenuTriggerFor]="menu">
+        <mat-icon>account_balance</mat-icon>
+        <a matline>Accounts</a>
+    </mat-list-item>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/checking_account" (click)="onSidenavClose()">Checking</button>
+        <button mat-menu-item routerLink="/savings_account" (click)="onSidenavClose()">Savings</button>
+        <button mat-menu-item routerLink="/investment_account" (click)="onSidenavClose()">Investment</button>
+        <button mat-menu-item routerLink="/transfer" (click)="onSidenavClose()">Transfer Money</button>
+    </mat-menu>
     <a mat-list-item routerLink="/profile" (click)="onSidenavClose()">
         <mat-icon>person</mat-icon><span class="nav-caption">Profile</span>
     </a>
     <a mat-list-item routerLink="/logout" (click)="onSidenavClose()">
         <mat-icon>logout</mat-icon><span class="nav-caption">Logout</span>
     </a>
+
+    
+    <!-- <mat-list-item [matMenuTriggerFor]="menu">
+        <mat-icon>home</mat-icon>
+        <a matline>Home</a>
+    </mat-list-item>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onSidenavClose()">Something</button>
+        <button mat-menu-item (click)="onSidenavClose()">Something2</button>
+        <button mat-menu-item (click)="onSidenavClose()">Something3</button>
+    </mat-menu> -->
+    
+    
 </mat-nav-list>
