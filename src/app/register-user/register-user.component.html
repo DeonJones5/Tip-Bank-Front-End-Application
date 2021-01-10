@@ -107,7 +107,7 @@
                 <mat-icon matSuffix>house</mat-icon>
               </mat-form-field>
 
-              <!-- <mat-form-field>
+              <mat-form-field>
                 <input
                 matInput
                 placeholder="State"
@@ -115,10 +115,49 @@
                 required
                 name="state"
                 ngModel
-                #city="ngModel">
-                  <mat-error *ngIf="state.invalid">City required</mat-error>
+                #state="ngModel">
+                  <mat-error *ngIf="state.invalid">State required</mat-error>
                 <mat-icon matSuffix>house</mat-icon>
-              </mat-form-field> -->
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                matInput
+                placeholder="Zip Code"
+                type="zipcode"
+                required
+                name="zipcode"
+                ngModel
+                #zipcode="ngModel">
+                  <mat-error *ngIf="zipcode.invalid">Zip Code required</mat-error>
+                <mat-icon matSuffix>house</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                matInput
+                placeholder="Which account would you like to set up?"
+                type="account"
+                required
+                name="account"
+                ngModel
+                #account="ngModel">
+                  <mat-error *ngIf="account.invalid">Account required</mat-error>
+                <mat-icon matSuffix>account_balance</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                matInput
+                placeholder="How much would you like to deposit?"
+                type="deposit"
+                required
+                name="deposit"
+                ngModel
+                #deposit="ngModel">
+                  <mat-error *ngIf="deposit.invalid">Deposit required</mat-error>
+                <mat-icon matSuffix>money</mat-icon>
+              </mat-form-field>
 
 
 

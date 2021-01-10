@@ -16,9 +16,22 @@
         <button mat-menu-item routerLink="/transfer" (click)="onSidenavClose()">Transfer Money</button>
         <button mat-menu-item routerLink="/transfer" (click)="onSidenavClose()">Transaction History</button>
     </mat-menu>
+    <a mat-list-item routerLink="/transfers" (click)="onSidenavClose()">
+        <mat-icon>send</mat-icon><span class="nav-caption">Transfers</span>
+    </a>
+
+    <a mat-list-item routerLink="/transaction-history" (click)="onSidenavClose()">
+        <mat-icon>history</mat-icon><span class="nav-caption">Transaction History</span>
+    </a>
+    
     <a mat-list-item routerLink="/profile" (click)="onSidenavClose()">
         <mat-icon>person</mat-icon><span class="nav-caption">Profile</span>
     </a>
+
+    <a mat-list-item routerLink="/contact-us" (click)="onSidenavClose()">
+        <mat-icon>message</mat-icon><span class="nav-caption">Contact Us</span>
+    </a>
+
     <a mat-list-item routerLink="/logout" (click)="onSidenavClose()">
         <mat-icon>logout</mat-icon><span class="nav-caption">Logout</span>
     </a>

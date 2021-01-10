@@ -5,13 +5,33 @@
         <mat-sidenav #sidenav role="navigation">
             <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
 
+        
         </mat-sidenav>
         <mat-sidenav-content>
             <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
             
                 <router-outlet></router-outlet>
+                
            
         </mat-sidenav-content>
     </mat-sidenav-container>
+    
 </main>
+
+<!-- tried to work on drop down menu for accounts (below code) -->
+
+<!-- <form action="" style="padding: 20px;">
+    <div class="form-field-group">
+        <span class="form-field-label">Account</span>
+        <mat-form-field>
+            <mat-label>Accounts</mat-label>
+        <mat-select name="accountString" [(value)]="selectedAccount">
+            <mat-option [value]="Checking">Checking Account</mat-option>
+            <mat-option [value]="Savings">Savings Account</mat-option>
+            <mat-option [value]="Investment">Investment Account</mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+</form> -->
+
 <!-- </app-layout> -->
