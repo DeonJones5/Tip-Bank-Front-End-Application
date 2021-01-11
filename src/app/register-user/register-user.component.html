@@ -171,7 +171,7 @@
                 name="deposit"
                 ngModel
                 #deposit="ngModel">
-                  <mat-error *ngIf="deposit.invalid">Deposit required</mat-error>
+                  <mat-error *ngIf="deposit.invalid">$25.00 minimum required</mat-error>
                 <mat-icon matSuffix>money</mat-icon>
               </mat-form-field>
 
@@ -226,3 +226,4 @@
       </mat-tab-group>
     </mat-card>
   </div>
+  
