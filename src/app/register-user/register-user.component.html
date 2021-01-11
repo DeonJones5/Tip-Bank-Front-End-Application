@@ -139,7 +139,7 @@
                 <mat-icon matSuffix>house</mat-icon>
               </mat-form-field>
 
-              <mat-form-field>
+              <!-- <mat-form-field>
                 <input
                 matInput
                 placeholder="Which account would you like to set up?"
@@ -150,6 +150,16 @@
                 #account="ngModel">
                   <mat-error *ngIf="account.invalid">Account required</mat-error>
                 <mat-icon matSuffix>account_balance</mat-icon>
+              </mat-form-field> -->
+
+
+              <mat-form-field>
+                <mat-label>Which account would you like to set up?</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let option of options" [value]="option.value">
+                    {{option.viewValue}}
+                  </mat-option>
+                </mat-select>
               </mat-form-field>
 
               <mat-form-field>
