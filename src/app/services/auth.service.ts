@@ -16,15 +16,15 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  executeJWTAuthenticationService = (username: string, password: string) => this.http.post<any>(
+  executeJWTAuthenticationService = (email: string, password: string) => this.http.post<any>(
     `${API_URL}/authenticate`, {
-    username,
+    email,
     password
     }
   ).pipe(
     map(
       response => {
-        sessionStorage.setItem(AUTHENTICATED_USER, username);
+        sessionStorage.setItem(AUTHENTICATED_USER, email);
         sessionStorage.setItem(TOKEN, `Bearer ${response.token}`);
         return response;
       }
