@@ -20,6 +20,7 @@ import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { AccountComponent } from './account/account.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AccountComponent } from './account/account.component';
     MatIconModule,
     FormsModule,
     RoutingModule,
-    MaterialModule
+    MaterialModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
